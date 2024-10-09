@@ -108,7 +108,7 @@ hacker@paths~position-yet-elsewhere:/proc/66$
 
 **Flag:** `pwn.college{om4l3HViybDiN6BP3bkQ3xF5b2O.dhDN1QDLxYTN0czW}`
 </br>
-## implicit relative paths, from /
+## 6. Implicit relative paths, from /
 
 **Task:** Understanding current working directory `cwd` and using `./`
 
@@ -134,7 +134,7 @@ hacker@paths~implicit-relative-paths-from-:/$
 
 **Flag:** `pwn.college{AdZLiBK77VTqmGgLNunYODvde8N.dlDN1QDLxYTN0czW}`
 </br>
-## explicit relative paths, from /
+## 7. Explicit relative paths, from /
 
 **Task:** Similar to task 6 using `./`
 
@@ -154,7 +154,7 @@ hacker@paths~explicit-relative-paths-from-:/$
 
 **Flag:** `pwn.college{4LDoH6zYyofdOeQiKNRJrYmxPDy.dBTN1QDLxYTN0czW}`
 </br>
-## implicit relative paths
+## 8. Implicit relative paths
 
 **Task:** further understanding of implicit paths.
 
@@ -183,7 +183,7 @@ hacker@paths~implicit-relative-path:/challenge$
 
 **Flag:** `pwn.college{MEHbRCcdsBAcGQ6dcUkjrsWHr6k.dFTN1QDLxYTN0czW}`
 </br>
-## home sweet home
+## 9. Home sweet home
 
 **Task 9:** Using `~` and moving between directories
 
