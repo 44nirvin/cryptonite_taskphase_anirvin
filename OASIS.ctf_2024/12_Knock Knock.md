@@ -1,5 +1,5 @@
 # Knock Knock
-# WRITEUP:
+## WRITEUP:
 
 Given is an obscured QR code. The player has to unobscure it using increased contrast, etc. to get the flag from the QR.
 
