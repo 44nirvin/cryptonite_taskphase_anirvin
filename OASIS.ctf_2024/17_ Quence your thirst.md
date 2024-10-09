@@ -101,7 +101,7 @@ for link in links:
     time.sleep(1)
 ```
 </br>
-this gave us the link:  https://katb.in/yxnzorqj 
+Now we knew that the correct link is:  https://katb.in/yxnzorqj 
 </br> 
 from there we found the flag.
 
