@@ -1,0 +1,127 @@
+# Module 3: Comprehending Commands
+## cat: not the pet, but the command!
+
+**Task:** Understand the `cat` command in Linux
+
+**Process:**  Use `cat` to read files, e.g., `cat /challenge/DESCRIPTION.md`; concatenate files with `cat myfile yourfile`; or read from the terminal without arguments. Access a flag in your home directory with `cat ~/flagfile`
+
+**Code:**
+```bash
+hacker@commands~cat-not-the-pet-but-the-command:~$ ls
+Desktop  flag  not-the-flag  q
+hacker@commands~cat-not-the-pet-but-the-command:~$ cat flag
+pwn.college{UYM5iD9El-6rJZ4kSCDyt9Ep-xm.dFzN1QDLwkTN0czW}
+```
+
+**Flag:** `pwn.college{UYM5iD9El-6rJZ4kSCDyt9Ep-xm.dFzN1QDLwkTN0czW}`
+</br>
+
+## catting absolute path
+
+**Task:** Understand the use of absolute paths with the `cat` command
+
+**Process:**  In the last level, you used `cat flag` to read the flag from your home directory. You can specify absolute paths, e.g., `cat /challenge/DESCRIPTION.md`. In this challenge, you can read the flag with `cat /flag`, which is usually not directly accessible
+**Code:**
+```bash
+hacker@commands~catting-absolute-paths:~$ ls
+Desktop  not-the-flag  q
+hacker@commands~catting-absolute-paths:~$ cat /flag
+pwn.college{8XDFiLyTXUI6DZRE6BhoWJZNlFQ.dlTM5QDLwkTN0czW}
+```
+
+**Flag:** `pwn.college{8XDFiLyTXUI6DZRE6BhoWJZNlFQ.dlTM5QDLwkTN0czW}`
+</br>
+
+## more catting practice
+
+**Task:** Practice using absolute paths with the `cat` command
+
+**Process:**  In this level, the flag is placed in a difficult-to-reach directory, and you cannot use `cd` to navigate. Retrieve the flag using its absolute path instead of `cat flag`
+
+**Flag:** `pwn.college{gtzsV4nz612yxAri7d11qYv-m-e.dBjM5QDLwkTN0czW}`
+</br>
+
+
+## grepping for a needle in a haystack
+
+**Task:** Use the `grep` command to search for specific content
+
+**Process:**  When files are too large to `cat`, use `grep` to find text. For example, `grep SEARCH_STRING /path/to/file` searches for lines containing `SEARCH_STRING`. In this challenge, search the `/challenge/data.txt` file for the flag, which starts with `pwn.college`
+
+
+**Flag:** `pwn.college{AVDHecleWl6JS0lW3YrObgabYYN.ddTM4QDLwkTN0czW}`
+</br>
+
+## listing files
+
+**Task:** Learn to use the `ls` command to list directory contents.
+
+**Process:**  Use `ls` to list files in specified directories or the current directory if none are given. For example, `ls /challenge` lists files in that directory. In this challenge, list the files in `/challenge` to find a randomly named file.
+
+**Flag:** `pwn.college{sETgQHivoR2xkUx-FWEUBpHlYJJ.dhjM4QDLwkTN0czW}`
+</br>
+
+## touching files
+
+**Task:** Learn to create files using the `touch` command
+
+**Process:**  Use `touch` to create new, blank files. For example, `touch pwnfile` creates a file in the current directory. In this level, create two files: `/tmp/pwn` and `/tmp/college`, then run `/challenge/run` to get your flag
+
+**Flag:** `pwn.college{UcY-uUgbhE9fQ_YJ-PYzFPG-cM-.dBzM4QDLwkTN0czW}`
+</br>
+## removing files
+
+**Task:** Learn to remove files using the `rm` command.
+
+**Process:**  Use `rm` to delete files, e.g., `rm PWN`removes the file. In this challenge, a `delete_me file` will be created in your home directory. Delete it, then run `/challenge/check` to verify the deletion and receive your flag.
+
+**Flag:** `pwn.cottege{w-k4kzk5EEiX0upp_79gCIX3iXo.dZTOwUDLwkTNOczW}`
+</br>
+## hidden files
+
+**Task:** Learn to list hidden files with the `ls` command.
+
+**Process:**  By default, `ls` doesn’t show files starting with a `.`. Use `ls -a` to view all files, including hidden ones. In this challenge, find the flag hidden as a dot-prepended file in `/`
+
+
+**Flag:** `pwn . college {MhkmWt7ryIYjGHpqcdb0QyqYWkp.dBTN4QDLwkTN0czW}`
+</br>
+
+
+## An Epic Filesystem Quest
+
+**Task:** Use `cd`, `ls`, and `cat` to follow clues and find the hidden flag
+
+**Process:**  Start in `/` and list the contents with `ls`. Look for a file named `HINT` or `CLUE`. Use `cat` to read the file for your next clue. Continue following the clues through directories until you find the flag
+
+
+**Flag:** `pwn.college{EMSoM1HDVjQIhKeM8ID202ohIQm.dljM4QDLwkTN0czW}`
+</br>
+
+## making dictionaries
+
+**Task:** Learn to create directories using the `mkdir` command.
+
+**Process:**  Use `mkdir` to create a directory, e.g., `mkdir my_directory`, then navigate into it and create files with touch. In this challenge, create a `/tmp/pwn` directory and a `college` file inside it. Finally, run `/challenge/run`
+
+
+**Flag:** `pwn.college{E1NhsqVRTx4KmOGpSdv3pXD9L2v.dFzM4QDLwkTN0czW}`
+</br>
+
+## finding files
+
+**Task:** Use the `find` command to locate files.
+
+**Process:**  The `find` command searches for files based on criteria and location. For example, `find` without arguments searches the current directory, while `find my_directory/my_subdirectory` searches a specific location. You can filter by name with `find -name filename`. In this challenge, find the hidden flag file in a random directory on the filesystem, keeping in mind that there are multiple files named `flag`
+
+
+**Flag:** `pwn.college{ow8t5b0Br4DktXeIWIJkNbgn7pD.dJzM4QDLwkTN0czW}`
+</br>
+## linking files
+
+**Task:** Learn to create and use symbolic links with the `ln` command
+
+**Process:**  Symbolic links (symlinks) allow multiple references to the same data. Create a symlink with `ln -s original_file link_name`, where the original file path comes first. For example, `ln -s /tmp/myfile /home/hacker/ourfile` creates a symlink. To identify a symlink, use the `file` command, which shows its target. In this challenge, the flag is in `/flag`, but `/challenge/catflag` reads from `/home/hacker/not-the-flag`
+
+**Flag:** `pwn.college{4X5ra5NdRcmV5erTTRlEvYk3puj.dlTM1UDLwkTN0czW}`
+</br>
